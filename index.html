@@ -16,26 +16,29 @@
         <div class="mid-container">
             <div class="l-in-container">
                 <h1>ETCH A SKETCH</h1>
-                <div class="slidecontainer">
-                    <div class="inner-slidecontainer">
-                        <input type="range" min="1" max="100" value="25" class="slider" id="myRange">
-                        <progress min="1" max="100" value="25" id="prog"></progress>
+                <div class="sl">
+                    <div class="slidecontainer">
+                        <div class="inner-slidecontainer">
+                            <input type="range" min="1" max="100" value="25" class="slider" id="myRange">
+                            <progress min="1" max="100" value="25" id="prog"></progress>
+                        </div>
                     </div>
-                    <div class="slidervalue" id="value">25</div>
+                    <input type="number" value="16" min="1" max="100" class="slidervalue" id="value">
                 </div>
+                
                 <p>Pick your color</p>
                 <div class="circle-colors">
-                    <input type="color" class="c" id="c1">
-                    <input type="color" class="c" id="c2">
-                    <input type="color" class="c" id="c3">
-                    <input type="color" class="c" id="c4">
-                    <input type="color" class="c" id="c5">
-                    <input type="color" class="c" id="c6">
+                    <input type="color" value="#E878A8" class="c" id="c1">
+                    <input type="color" value="#85C1B5" class="c" id="c2">
+                    <input type="color" value="#A3C680" class="c" id="c3">
+                    <input type="color" value="#BAB5B5" class="c" id="c4">
+                    <input type="color" value="#DFC57C" class="c" id="c5">
+                    <input type="color" value="#E6AEA7" class="c" id="c6">
                 </div>
                 <div class="buttons">
-                    <button>Random</button>
-                    <button>Eraser</button>
-                    <button>Clear</button>
+                    <button class="ran">Random</button>
+                    <button class="era">Eraser</button>
+                    <button class="cle">Clear</button>
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@
 }
 
 .left-container {
-    width: 1%;
+    width: 6%;
     opacity: 70%;
     background-image: url('../images/leaves.jpg');
     background-repeat: no-repeat;
@@ -30,7 +30,7 @@
 }
 
 .mid-container {
-    width: 45%;
+    width: 41%;
     display: flex;
     background-color: #FCAE7D;
     font-size: 25px;
@@ -39,7 +39,7 @@
 }
 
 .right-container {
-    width: 54%;
+    width: 53%;
     opacity: 70%;
     background-image: url('../images/leaves.jpg');
     background-repeat: no-repeat;
@@ -50,13 +50,12 @@
 h1 {
     font-family: winkyrough;
     color: #FFFBF5;
-    margin-bottom: 7%;
+    margin-bottom: 5%;
 }
 
 p {
     font-family: winkyrough;
     color: #FFFBF5;
-    margin-bottom: 3%;
 }
 
 .circle-colors {
@@ -74,7 +73,7 @@ p {
     width: 60px;
     height: 60px;
     top: 32%;
-    padding: 3%;
+    padding: 2%;
 }
 
 #c2 {
@@ -104,7 +103,7 @@ p {
     width: 38px;
     height: 38px;
     top: 12%;
-    left: 8%;
+    left: 10%;
     padding: 0.6%;
 }
 
@@ -157,13 +156,23 @@ button {
     transition: box-shadow .5s;
 }
 
-button:hover {
+.ran:hover {
+    background-color: #E26E9D;
+    color: #FFFBF5;
+}
+
+.era:hover {
     background-color: #43B7C7;
     color: #FFFBF5;
 }
 
+.cle:hover {
+    background-color: #B3C580;
+    color: #FFFBF5;
+}
+
+
 button:active {
-    background-color: #43B7C7;
     color: #FFFBF5;
     opacity: 0.5; 
 }
@@ -171,9 +180,9 @@ button:active {
 .grd {
     position: fixed;
     top: 10%;
-    left: 40%;
+    left: 43%;
     background-color: rgb(255, 255, 255);
-    border: 1px solid black;
+    border: none;
     width: 500px;           
     height: 500px;     
     display: flex;
@@ -182,28 +191,31 @@ button:active {
 }
 
 .grd:hover {
-    box-shadow: 1px 1px 0.5px rgb(236, 233, 233);
     cursor: pointer;
-}
-
-.grd:active {
-    box-shadow: 0.5px 0.5px 0.25px rgb(236, 233, 233);
 }
 
 .squares {
     background-color: white;
-    outline: 1px solid rgb(227, 227, 227);
+    outline: 1px solid rgb(228, 228, 228);
+}
+
+.sl {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    margin-bottom: 2%;
 }
 
 .slidecontainer {
+    width: 80%;
     padding: 22px;
-    /*outline: 2px solid #D1A7A7;*/
     background-color: #43B7C7;
     border-radius: 5px 25px 25px 5px;
     display: flex;
     justify-content: center;
-    color: white;
-    margin-bottom: 5%;
+    color: #FFFBF5;
+    text-align: center;
 }
 
 .inner-slidecontainer {
@@ -252,13 +264,6 @@ button:active {
     background-color: #B3C580;
 }
 
-.slidervalue {
-    width: 28px;
-    height: 20px;
-    margin-left: 10px;
-    text-align: center;
-}
-
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -266,5 +271,36 @@ button:active {
 
 .slider {
     -webkit-appearance: none;
-}  
+}
+
+input[type="number"] {
+  outline: none;
+  border: none; /* Optional: if you want no visible border at all */
+  background-color: transparent;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  box-shadow: none;
+  border: none; /* Important for some browsers */
+}
+
+.slidervalue {
+    width: 15%;
+    font-family: Arial;
+    font-weight: 600;
+    color: rgb(226, 110, 166);
+    font-size: 22px;
+}
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 

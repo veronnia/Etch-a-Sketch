@@ -5,11 +5,19 @@ let output = document.getElementById("value");
 let progress = document.getElementById("prog");
 
 slider.oninput = function() {
-    output.innerHTML = this.value;
+    output.value = this.value;
     progress.value = slider.value;  
     deleteGrid();
-    createGrid(this.value);
-        
+    createGrid(this.value);  
+}
+
+output.oninput = function() {
+    if (this.value > 100) this.value = 100;
+    else if (this.value < 0) this.value = 0; 
+    progress.value = this.value;
+    slider.value = this.value;
+    deleteGrid();
+    createGrid(this.value); 
 }
 
 createGrid(size);
