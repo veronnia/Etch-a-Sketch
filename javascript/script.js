@@ -59,3 +59,9 @@ function deleteGrid() {
         sketch.removeChild(sketch.lastChild);
     }
 }
+
+output.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+    }
+});
