@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    
+</head>
+<body>
+    <div class="big-container">
+        <div class="left-container">
+
+        </div>
+        <div class="mid-container">
+            <div class="l-in-container">
+                <h1>ETCH A SKETCH</h1>
+                <div class="slidecontainer">
+                    <div class="inner-slidecontainer">
+                        <input type="range" min="1" max="100" value="25" class="slider" id="myRange">
+                        <progress min="1" max="100" value="25" id="prog"></progress>
+                    </div>
+                    <div class="slidervalue" id="value">25</div>
+                </div>
+                <p>Pick your color</p>
+                <div class="circle-colors">
+                    <input type="color" id="c1">
+                    <input type="color" id="c2">
+                    <input type="color" id="c3">
+                    <input type="color" id="c4">
+                    <input type="color" id="c5">
+                    <input type="color" id="c6">
+                </div>
+                <div class="buttons">
+                    <button>Random</button>
+                    <button>Eraser</button>
+                    <button>Clear</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            
+        </div>
+    </div>
+    
+
+    <script src="javascript/script.js"></script>
+</body>
