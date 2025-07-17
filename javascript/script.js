@@ -12,12 +12,25 @@ slider.oninput = function() {
 }
 
 output.oninput = function() {
-    if (this.value > 100) this.value = 100;
-    else if (this.value < 0) this.value = 0; 
-    progress.value = this.value;
-    slider.value = this.value;
-    deleteGrid();
-    createGrid(this.value); 
+    if (this.value > 100) {
+        this.value = 100;
+        progress.value = this.value;
+        slider.value = this.value;
+        deleteGrid();
+        createGrid(this.value);
+    }
+    else if (this.value < 1) { 
+        progress.value = this.value;
+        slider.value = 1;
+        deleteGrid();
+        createGrid(1);
+    }
+    else {
+        progress.value = this.value;
+        slider.value = this.value;
+        deleteGrid();
+        createGrid(this.value);
+    }
 }
 
 createGrid(size);
