@@ -6,6 +6,9 @@ let progress = document.getElementById("prog");
 let selectedColor = null;
 let lastSelectedColor = null;
 const colorInputs = document.querySelectorAll("#color-inputs input[type='color']");
+let isMouseDown = false;
+document.body.addEventListener("mousedown", () => isMouseDown = true);
+document.body.addEventListener("mouseup", () => isMouseDown = false);
 
  
 slider.oninput = function() {
@@ -54,8 +57,14 @@ function createGrid(size) {
             
             sketch.append(square);
 
-            square.addEventListener("mouseenter", () => {
+            square.addEventListener("mousedown", () => {
                 if (selectedColor) {
+                    square.style.backgroundColor = selectedColor;
+                }
+            });
+
+            square.addEventListener("mouseenter", () => {
+                if (isMouseDown && selectedColor) {
                     square.style.backgroundColor = selectedColor;
                 }
             });
