@@ -72,12 +72,14 @@ p {
   
 }
 
-.c {
-    position: relative;
-
-}
+.c:hover {
+    outline: 1px solid rgb(227, 226, 226);
+    outline-offset: 2px;
+    border-radius: 50%;
+} 
 
 #c1 {
+    position: relative;
     width: 55px;
     height: 55px;
     top: 32%;
@@ -85,6 +87,7 @@ p {
 }
 
 #c2 {
+    position: relative;
     width: 42px;
     height: 42px;
     left: -12%;
@@ -93,6 +96,7 @@ p {
 }
 
 #c3 {
+    position: relative;
     width: 47px;
     height: 47px;
     left: 65%;
@@ -101,6 +105,7 @@ p {
 }
 
 #c4 {
+    position: relative;
     width: 27px;
     height: 27px;
     top: -8%;
@@ -108,6 +113,7 @@ p {
 }
 
 #c5 {
+    position: relative;
     width: 38px;
     height: 38px;
     top: 14%;
@@ -116,6 +122,7 @@ p {
 }
 
 #c6 {
+    position: relative;
     width: 45px;
     height: 45px;
     top: -2%;
@@ -301,14 +308,14 @@ form {
 
 input[type="number"] {
   outline: none;
-  border: none; /* Optional: if you want no visible border at all */
+  border: none; 
   background-color: transparent;
 }
 
 input[type="number"]:focus {
   outline: none;
   box-shadow: none;
-  border: none; /* Important for some browsers */
+  border: none; 
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -321,3 +328,8 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.selected-color {
+    outline: 1px solid rgb(227, 226, 226);
+    outline-offset: 2px;
+    border-radius: 4px;
+}

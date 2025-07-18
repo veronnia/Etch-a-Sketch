@@ -3,7 +3,11 @@ let slider = document.getElementById("myRange");
 let size = 25;
 let output = document.getElementById("value");
 let progress = document.getElementById("prog");
+let selectedColor = null;
+let lastSelectedColor = null;
+const colorInputs = document.querySelectorAll("#color-inputs input[type='color']");
 
+ 
 slider.oninput = function() {
     output.value = this.value;
     progress.value = slider.value;  
@@ -49,6 +53,12 @@ function createGrid(size) {
             console.log("hi");
             
             sketch.append(square);
+
+            square.addEventListener("mouseenter", () => {
+                if (selectedColor) {
+                    square.style.backgroundColor = selectedColor;
+                }
+            });
         }
     }
 }
@@ -64,4 +74,22 @@ output.addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
       e.preventDefault();
     }
+});
+
+colorInputs.forEach(input => {
+    input.addEventListener("click", () => {
+        selectedColor = input.value; 
+        colorInputs.forEach(i => i.classList.remove("selected-color"));
+
+        input.classList.add("selected-color");
+    });
+});
+
+colorInputs.forEach(input => {
+    input.addEventListener("input", () => {
+        selectedColor = input.value; 
+        colorInputs.forEach(i => i.classList.remove("selected-color"));
+
+        input.classList.add("selected-color");
+    });
 });
