@@ -1,6 +1,6 @@
 const sketch = document.querySelector('.grd');
 let slider = document.getElementById("myRange");
-let size = 25;
+let size = 16;
 let output = document.getElementById("value");
 let progress = document.getElementById("prog");
 let selectedColor = null;
@@ -9,11 +9,26 @@ const colorInputs = document.querySelectorAll("#color-inputs input[type='color']
 let isMouseDown = false;
 document.body.addEventListener("mousedown", () => isMouseDown = true);
 document.body.addEventListener("mouseup", () => isMouseDown = false);
+let randomButton = document.getElementById("random");
+let eraserButton = document.getElementById("eraser");
+let clearButton = document.getElementById("clear");
 
+eraserButton.addEventListener("click", () => {
+    selectedColor = "#ffffff";
+    colorInputs.forEach(i => i.classList.remove("selected-color"));
+});
+
+clearButton.addEventListener("click", () => {
+    selectedColor = null;
+    colorInputs.forEach(i => i.classList.remove("selected-color"));
+    deleteGrid();
+    createGrid(size);
+});
  
 slider.oninput = function() {
     output.value = this.value;
     progress.value = slider.value;  
+    size = this.value;
     deleteGrid();
     createGrid(this.value);  
 }
@@ -25,19 +40,23 @@ output.oninput = function() {
         slider.value = this.value;
         deleteGrid();
         createGrid(this.value);
+        size = this.value;
     }
     else if (this.value < 1) { 
         progress.value = this.value;
         slider.value = 1;
         deleteGrid();
         createGrid(1);
+        size = this.value;
     }
     else {
         progress.value = this.value;
         slider.value = this.value;
         deleteGrid();
         createGrid(this.value);
+        size = this.value;
     }
+
 }
 
 createGrid(size);
@@ -89,8 +108,8 @@ colorInputs.forEach(input => {
     input.addEventListener("click", () => {
         selectedColor = input.value; 
         colorInputs.forEach(i => i.classList.remove("selected-color"));
-
         input.classList.add("selected-color");
+        lastSelectedColor = selectedColor;
     });
 });
 
@@ -98,7 +117,7 @@ colorInputs.forEach(input => {
     input.addEventListener("input", () => {
         selectedColor = input.value; 
         colorInputs.forEach(i => i.classList.remove("selected-color"));
-
         input.classList.add("selected-color");
+        lastSelectedColor = selectedColor;
     });
 });
