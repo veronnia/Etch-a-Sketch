@@ -59,6 +59,4 @@ This project helped reinforce key web development concepts such as:
 ---
 
 ## 📸 Screenshot
-
-```markdown
-![Etch A Sketch Screenshot](./screenshot.png)
+![Etch A Sketch Screenshot](./images/figma.png)
