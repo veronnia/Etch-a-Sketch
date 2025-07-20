@@ -190,8 +190,9 @@ button:active {
 
 .grd {
     position: fixed;
-    top: 10%;
-    left: 43%;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
     background-color: rgb(255, 255, 255);
     border: none;
     width: 500px;           
