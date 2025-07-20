@@ -1,4 +1,4 @@
-# 🖌️ Etch A Sketch
+# Etch A Sketch
 
 ## Overview
 
@@ -8,35 +8,35 @@ The goal of the project was to practice JavaScript DOM manipulation, event handl
 
 ---
 
-## 🎨 Features
+## Features
 
-- 🔲 **Dynamic Grid Drawing**  
+- **Dynamic Grid Drawing**  
   The grid is dynamically generated using JavaScript and can be resized using a slider and number input.
 
-- 🌸 **Colorful Flower Palette**  
+- **Colorful Flower Palette**  
   A 6-color palette is arranged in the shape of a **flower** to match the playful and colorful design. Each color can be customized by the user.
 
-- 🌈 **Random Color Mode**  
+- **Random Color Mode**  
   A "Random" button enables color randomization while drawing.
 
-- 🧼 **Clear Button**  
+- **Clear Button**  
   Resets the entire grid to its original blank state.
 
-- 🧽 **Eraser Tool**  
+- **Eraser Tool**  
   Allows users to erase drawn colors by returning squares to white.
 
-- 🌑 **Darken Effect**  
+- **Darken Effect**  
   Each time the cursor passes over a colored square, it darkens by 10% until it becomes black.
 
 ---
 
-## 🖼️ UI Design
+## UI Design
 
 The user interface was first designed using **Figma** to ensure a clean, modern, and user-friendly look. The layout and color scheme were carefully planned to reflect a **fun and colorful experience** for the user.
 
 ---
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 - HTML
 - CSS (with Flexbox layout)
@@ -45,7 +45,7 @@ The user interface was first designed using **Figma** to ensure a clean, modern,
 
 ---
 
-## 📁 Project Purpose
+## Project Purpose
 
 This project helped reinforce key web development concepts such as:
 
@@ -58,5 +58,5 @@ This project helped reinforce key web development concepts such as:
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 ![Etch A Sketch Screenshot](./images/figma.png)
